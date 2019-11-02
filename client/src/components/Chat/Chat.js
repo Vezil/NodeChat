@@ -17,7 +17,8 @@ const Chat = ({ location }) => {
     const [ message, setMessage ] = useState('');
     const [ messages, setMessages ] = useState([]);
 
-    const ENDPOINT = 'localhost:5000';
+    // const ENDPOINT = 'localhost:5000';
+    const ENDPOINT = 'https://vezil-nodechat.herokuapp.com/';
 
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
@@ -62,6 +63,7 @@ const Chat = ({ location }) => {
                 <Messages messages = { messages } name = { name }/>
                 <Input message = { message } setMessage = { setMessage } sendMessage = { sendMessage } />
             </div>
+            {/* <TextContainer users = { users } /> */}
         </div>
     )
 }
