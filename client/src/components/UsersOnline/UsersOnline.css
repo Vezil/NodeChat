@@ -1,4 +1,47 @@
-.test{
-    color:red;
-    font-size:50px;
+.UsersOnline{
+    color:rgb(80, 119, 7);
+    font-size: 3rem;
+    margin-left: 7%;
+    border: 2px solid gray;
+    padding:2%;
+    padding-top: 1px;
 }
+
+.UsersOnline h2{
+    color:rgb(251, 247, 0);
+    font-size: 4rem;
+    text-decoration-line:underline;
+
+}
+.onlineUserIcon{
+    width:15px;
+    margin-bottom: 3%;
+
+}
+.user{
+
+    border-bottom: 1px dashed rgb(80, 119, 7);
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+    .UsersOnline{
+      width:40%;
+      font-size: 1rem;
+    }
+    .UsersOnline h2{
+        width:40%;
+        font-size: 2rem;
+      }
+  }
+
+  @media (max-width: 480px) {
+    .UsersOnline{
+        width:30%;
+        font-size: 1rem;
+        float:left;
+      }
+      .UsersOnline h2{
+        width:40%;
+        font-size: 2rem;
+      }
+  }
