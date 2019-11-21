@@ -6,6 +6,7 @@ import './Chat.css';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import Messages from '../Messages/Messages';
+import UsersOnline from '../UsersOnline/UsersOnline';
 
 let socket;
 
@@ -16,9 +17,10 @@ const Chat = ({ location }) => {
     const [ room, setRoom ] = useState('');
     const [ message, setMessage ] = useState('');
     const [ messages, setMessages ] = useState([]);
+    const [users, setUsers] = useState('');
 
-    // const ENDPOINT = 'localhost:5000';
-    const ENDPOINT = 'https://vezil-nodechat.herokuapp.com/';
+     const ENDPOINT = 'localhost:5000';
+   // const ENDPOINT = 'https://vezil-nodechat.herokuapp.com/';
 
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
@@ -43,6 +45,12 @@ const Chat = ({ location }) => {
         socket.on('message', (message) => {
             setMessages([...messages, message]);
         })
+        
+        socket.on('roomData',({ users })=>{
+
+            setUsers(users);
+        })
+
     }, [messages]);
 
 
@@ -54,7 +62,6 @@ const Chat = ({ location }) => {
       }
   }
 
-  //console.log(message, messages);
   
     return(
         <div className="outerContainer">
@@ -63,7 +70,7 @@ const Chat = ({ location }) => {
                 <Messages messages = { messages } name = { name }/>
                 <Input message = { message } setMessage = { setMessage } sendMessage = { sendMessage } />
             </div>
-            {/* <TextContainer users = { users } /> */}
+            <UsersOnline users = { users } />
         </div>
     )
 }
