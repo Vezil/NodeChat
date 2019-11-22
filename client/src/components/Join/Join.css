@@ -18,7 +18,11 @@ html, body {
     text-align: center;
     height: 100vh;
     align-items: center;
-    background-color: #1A1A1D;
+    background-image: url("tlo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
   }
   
   .joinInnerContainer {
@@ -42,7 +46,7 @@ html, body {
       color: #fff !important;
       text-transform: uppercase;
       text-decoration: none;
-      background: #2979FF;
+      background: rgb(36, 106, 228);
       padding: 20px;
       border-radius: 5px;
       display: inline-block;

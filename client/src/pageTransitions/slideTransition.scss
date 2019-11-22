@@ -1,0 +1,40 @@
+.pageSlider-exit > .outerContainer {
+
+    z-index:1;
+}
+
+.pageSlider-enter > .outerContainer {
+    z-index:10;
+}
+
+.pageSlider-enter.left > .outerContainer {
+
+    transform: translate3d(100%,0,0);
+}
+
+.pageSlider-enter.right > .joinOuterContainer {
+
+    transform: translate3d(-100%,0,0);
+}
+
+.pageSlider-exit.left > .outerContainer {
+
+    transform: translate3d(-100%,0,0);
+}
+
+.pageSlider-exit.right > .joinOuterContainer {
+
+    transform: translate3d(100%,0,0);
+}
+
+.pageSlider-enter.pageSlider-enter-active > .outerContainer {
+
+    transform: translate3d(0,0,0);
+    transition: all 800ms ease-in-out;
+}
+
+.pageSlider-enter.pageSlider-enter-active > .joinOuterContainer {
+
+    transform: translate3d(0,0,0);
+    transition: all 800ms ease-in-out;
+}
