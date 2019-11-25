@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
 .UsersOnline{
     color:rgb(80, 119, 7);
-    font-size: 3rem;
+    font-size: 2rem;
     margin-left: 7%;
     border: 2px solid gray;
     padding:2%;
     padding-top: 1px;
+    font-family: 'Monoton', cursive;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
 }
 
 .UsersOnline h2{
-    color:rgb(251, 247, 0);
-    font-size: 4rem;
+    color:rgb(158, 156, 52);
+    font-size: 3rem;
     text-decoration-line:underline;
+    letter-spacing: 4px;
 
 }
 .onlineUserIcon{
@@ -41,7 +47,7 @@
         float:left;
       }
       .UsersOnline h2{
-        width:40%;
-        font-size: 2rem;
+        width:30%;
+        font-size: 1.1rem;
       }
   }

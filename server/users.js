@@ -4,6 +4,9 @@ const addUser = ({ id,name,room }) => {
 
     name = name.trim().toLowerCase(); // usuwanie znakow bialych i zmniejszanie liter
     room = room.trim().toLowerCase();
+
+    name = name.toProperCase(); 
+    room = room.toProperCase();
     
     const existingUser = users.find((user) => user.room === room && user.name === name);
 
@@ -32,5 +35,9 @@ const getUser = (id) => users.find((user) => user.id === id );
 
 
 const getUsersInRoom = (room) => users.filter((user) => user.room === room);
+
+String.prototype.toProperCase = function () {
+    return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+};
 
 module.exports = { addUser, removeUser, getUser, getUsersInRoom };

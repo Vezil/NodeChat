@@ -7,6 +7,7 @@ import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import Messages from '../Messages/Messages';
 import UsersOnline from '../UsersOnline/UsersOnline';
+import Footer from '../Footer/Footer';
 
 let socket;
 
@@ -19,8 +20,8 @@ const Chat = ({ location }) => {
     const [ messages, setMessages ] = useState([]);
     const [users, setUsers] = useState('');
 
-     const ENDPOINT = 'localhost:5000';
-   // const ENDPOINT = 'https://vezil-nodechat.herokuapp.com/';
+    const ENDPOINT = 'localhost:5000';
+    // const ENDPOINT = 'https://vezil-nodechat.herokuapp.com/';
 
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
@@ -71,6 +72,7 @@ const Chat = ({ location }) => {
                 <Input message = { message } setMessage = { setMessage } sendMessage = { sendMessage } />
             </div>
             <UsersOnline users = { users } />
+            <Footer/>
         </div>
     )
 }

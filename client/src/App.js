@@ -5,6 +5,7 @@ import { Switch, Route, withRouter } from "react-router-dom";
 import Join from './components/Join/Join';
 import Chat from './components/Chat/Chat';
 
+
 import "./pageTransitions/slideTransition.scss";
 
 class App extends Component {
@@ -41,8 +42,8 @@ render ()  {
             <div className={this.getPathDepth(location) - this.state.prevDepth >= 0 ? "left" : "right"}>
                 <Switch location = { location }>
                     <Route path="/" exact component ={ Join } />
-                    <Route path="/chat" exact component ={ Chat } />
-                </Switch>
+                    <Route path="/chat" exact component ={ Chat } />       
+                </Switch>               
             </div>
         </CSSTransition>
     </TransitionGroup>
