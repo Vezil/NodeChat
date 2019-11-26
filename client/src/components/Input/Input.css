@@ -24,13 +24,15 @@
     display: inline-block;
     border: none;
     width: 20%;
+
+    
   }
+
 
   .fa-paper-plane{
     font-size:20px;
   }
-
-  .sendButton:hover{
+button:hover{
     background: rgb(22, 84, 199);
     cursor:pointer;
   }

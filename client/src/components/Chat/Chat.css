@@ -18,7 +18,7 @@
     margin:6px;
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.75);
   }
-  
+
   @media (max-width: 480px) {
     .outerContainer {
       /* height: 100%; */

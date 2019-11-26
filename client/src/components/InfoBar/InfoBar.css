@@ -31,3 +31,15 @@
 
   color:rgb(240, 221, 50);
 }
+
+img{
+  width:10px;
+  height:10px;
+  transition: width,height 1s;
+}
+img:hover{
+
+  width:14px;
+  height:14px;
+  
+}
