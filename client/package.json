@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@joeattardi/emoji-button": "^2.3.0",
+    "@joeattardi/emoji-button": "^4.6.2",
     "bootstrap": "^4.3.1",
     "emoji-mart": "^2.11.1",
     "emojionearea": "^3.0.0",
